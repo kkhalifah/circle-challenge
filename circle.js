@@ -6,6 +6,9 @@ var radiusInput = document.getElementById('inputRadius').value;
 console.log(radiusString);
 
 var newElement = document.createElement("div");
+newElement.style.width=(radiusInput*2) + "px";
+newElement.style.height=(radiusInput*2) + "px";
+newElement.style.borderRadius = "50%";
 document.body.appendChild(newElement);
 document.getElementById("click");
 
@@ -14,11 +17,15 @@ areaTotaled.className= "areaTotaled";
 areaTotaled.innerText="Area is " + (radiusInput*radiusInput*Math.PI).toFixed(2);
 newElement.appendChild(areaTotaled);
 
-//var newElement = document.createElement("p");
-//newElement.className= "redcircle";
-document.getElementById("redcircle").style.width=(radiusInput*2) + "px";
-document.getElementById('redcircle').style.height=(radiusInput*2) + "px";
-document.body.appendChild(newElement);
+var redcircle = document.createElement("div");
+redcircle.style.width=(radiusInput*2) + "px";
+redcircle.style.height=(radiusInput*2) + "px";
+redcircle.backgroundColor ="red";
+redcircle.borderRadius ="50%";
+redcircle.className= "test";
+// document.getElementById("redcircle").style.width=(radiusInput*2) + "px";
+// document.getElementById('redcircle').style.height=(radiusInput*2) + "px";
+document.body.appendChild(redcircle);
 
 
 // <button type="button" onclick="myFunction()">Change height and width of image</button>
